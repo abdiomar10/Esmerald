@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Property - Esmerald Homes</title>
+    <link rel="stylesheet" href="esmerald.css">
+    <link rel="icon" href="logo - Imgur.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="logo - Imgur.jpg" type="image/jpeg">
+</head>
+<body>
+    <header>
+        <h1>Find a Property</h1>
+    </header>
+    <form class="search-form" onsubmit="searchProperties(event)">
+        <label for="min-price">Min Price:</label>
+        <input type="number" id="min-price" name="min-price" min="0" max="5000000">
+        <label for="max-price">Max Price:</label>
+        <input type="number" id="max-price" name="max-price" min="0" max="5000000">
+        
+<br>
+<label for="house-type">House Type:</label>
+<select id="house-type">
+<option value="all">All</option>
+<option value="apartment">Apartment</option>
+<option value="beach-house">Beach House</option>
+<option value="cabin">Cabin</option>
+<option value="bungalow">Bungalow</option>
+</select>
+<button type="button" onclick="searchProperties()">Search</button>
+    <main>
+
+        </section>
+
+        <section id="appointment">
+            <h2>Book an Appointment</h2>
+            <p>To schedule a viewing or for any inquiries, please fill out the form below:</p>
+            <form id="appointmentForm" onsubmit="bookAppointment(event)">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <section id="propertyClasses">
+            <h2>Property Classes</h2>
+            <div class="property-class">
+                <h3>Cabin Houses </h3>
+                <div class="houses">
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.ok7Z9Fn_aCcmhf3xhFcWwgHaE7?w=284&h=189&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="2 bedroom">
+                        <h4>2 bedroom</h4>
+                        <p>Price: $200,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.wroRakCWNFO24ERvZLXbOQHaE8?w=299&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="3 bedroom">
+                        <h4>3 bedroom</h4>
+                        <p>Price: $220,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.Imjzr7cEpNGcKHpllbdOuAHaE8?w=258&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="4 bedroom">
+                        <h4>4 bedroom</h4>
+                        <p>Price: $180,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.EvckntF6lMdR5HbgaUGyJgHaFC?w=258&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="5 bedroom">
+                        <h4>5 bedroom</h4>
+                        <p>Price: $250,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="property-class">
+                <h3>Apartments</h3>
+                <div class="houses">
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.lP4PuaO32PtZQ6ReihPMhwHaE8?w=286&h=191&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="3 bedroom">
+                        <h4>3 bedroom</h4>
+                        <p>Price: $280,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.-NBMdlsiaw3J9B7aorVVVQHaGH?w=247&h=204&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="4 bedroom">
+                        <h4>4 bedroom</h4>
+                        <p>Price: $320,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.tJn2F5OkE2DrBHTcNCvqTAHaFC?w=279&h=190&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="5 bedroom">
+                        <h4>5 bedroom</h4>
+                        <p>Price: $310,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="property-class">
+                <h3>Beach House</h3>
+                <div class="houses">
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.JSBwthxd9YGiunmi92zyBAHaEK?w=305&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="2 bedroom">
+                        <h4>3 bedroom</h4>
+                        <p>Price: $600,000</p>
+                    </div>
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.UzzMhfQY4iAmH1kqtUb4QAHaFD?w=226&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="4 bedroom">
+                        <h4>4 bedroom</h4>
+                        <p>Price: $550,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+                    <div class="house-card">
+                        <img src="https://th.bing.com/th/id/OIP.4jYc2ZGkheolk5Mk8yvkTQHaE8?w=284&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="5 bedroom">
+                        <h4>5 bedroom</h4>
+                        <p>Price: $620,000</p>
+                        <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+                    </div>
+            <div>
+                </div>
+            </div>
+        
+            <div class="property-class">
+                <h3>Bungalow </h3>
+                <div class="houses">
+                </div>
+            </div>
+            <div class="house-card">
+                <img src="https://th.bing.com/th/id/OIP.HolBZvItA4FKRHwlPydOVQHaE7?w=242&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="2 bedroom">
+                <h4>2 bedroom</h4>
+                <p>Price: $400,000</p>
+                <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+            </div>
+            <div class="house-card">
+                <img src="https://th.bing.com/th/id/OIP.Qv9Ysvu0KbSZfAelkprQuQHaEK?w=284&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="3 bedroom">
+                <h4>3 bedroom</h4>
+                <p>Price: $380,000</p>
+            </div>
+            <div class="house-card">
+                <img src="https://th.bing.com/th/id/OIP.d0kDO5-m5QaaL6KY-QjoqAAAAA?w=291&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="4 bedroom">
+                <h4>4 bedroom</h4>
+                <p>Price: $420,000</p>
+            </div>
+            <div class="house-card">
+                <img src="https://th.bing.com/th/id/OIP.THBr94Ly1o6ehbRH4P1P9AHaEK?w=315&h=180&c=7&r=0&o=5&dpr=1.8&pid=1.7" alt="5 bedroom">
+                <h4>5 bedroom</h4>
+                <p>Price: $410,000</p>
+                <button onclick="buyHouse()">Buy</button>
+                    <button onclick="rentHouse()">Rent</button>
+                    <button onclick="viewHouse()">View</button>
+            </div>
+            </div>
+        </div>
+        </section>
+        <script src="find a property.js"></script>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="#"><img src="https://th.bing.com/th?id=OIP.t1fyvKgDnUoIiC049MG48AHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.8&pid=3.1&rm=2" alt="Twitter" width="30" height="30"></a>
+            <a href="#"><img src="https://th.bing.com/th?id=OIP.A_QLZ7Y9nBwaWnkhCbvGmQHaHZ&w=250&h=249&c=8&rs=1&qlt=90&o=6&dpr=1.8&pid=3.1&rm=2" alt="Instagram" width="30" height="30"></a>
+            <a href="#"><img src="https://th.bing.com/th?id=OIP.Ux2AIO7El8dpiVUvF2DYFgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.8&pid=3.1&rm=2" alt="Facebook" width="30" height="30"></a>
+        </div>
+        <p>&copy; 2024 Esmerald Homes. All rights reserved.</p>
+    </footer>
